@@ -1,2 +1,2 @@
-# ejemplo-pagina-web
-Esto es un ejemplo de como subir una pagina web html a GitHub
+# Challenge – Disease detectives: Modeling COVID-19
+Repositorio 
