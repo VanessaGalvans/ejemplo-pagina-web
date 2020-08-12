@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Mapa</title>
+    <style>
+        #map{
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+    <script data-main="js/app" src="js/lib/require.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+    <script id="template">
+        El lugar con id <b>{{ m.attributes.id }}</b><br/> está en la posición<br/> <i>{{ m.attributes.lat }},{{ m.attributes.lng }}</i>
+    </script>
+    <script>
+        window.load_app = function(){
+            window.map_view = new MapView({
+                url: '/data.json/',
+                yourPositionMarker: true,
+                pinsImage: '/img/pin.png',
+                //centerPin: '/img/pin.png',
+                popupTemplate: $("#template").html()
+            });
+        }
+    </script>
+</body>
+</html>
