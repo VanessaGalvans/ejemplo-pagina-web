@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_c796e3f8032f48da8d927582641a7187 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_c796e3f8032f48da8d927582641a7187" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_c796e3f8032f48da8d927582641a7187 = L.map(
+        'map_c796e3f8032f48da8d927582641a7187', {
+        center: [21, -99.1269],
+        zoom: 4,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+
+    
+    var tile_layer_fba43f8ca2fd435781b65c0746de9bd4 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_c796e3f8032f48da8d927582641a7187);
+    
+        var marker_363cd30090e84bc4a822679ed3050100 = L.marker(
+            [21, -99.1269],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_c796e3f8032f48da8d927582641a7187);
+        
+    
+        marker_363cd30090e84bc4a822679ed3050100.bindTooltip(
+            `<div>`
+            + `CDMX` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_b7afb33eff424d898437bfad52b897da = L.marker(
+            [21.0181, -101.25821],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_c796e3f8032f48da8d927582641a7187);
+        
+    
+        marker_b7afb33eff424d898437bfad52b897da.bindTooltip(
+            `<div>`
+            + `Guanajuato` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_99c42cc066f34e938c9334d9e2b72167 = L.marker(
+            [19.18095, -96.1429],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_c796e3f8032f48da8d927582641a7187);
+        
+    
+        marker_99c42cc066f34e938c9334d9e2b72167.bindTooltip(
+            `<div>`
+            + `Veracruz` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_f07f153033da476990282cbc41aaf430 = L.marker(
+            [32.5027, -117.003],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_c796e3f8032f48da8d927582641a7187);
+        
+    
+        marker_f07f153033da476990282cbc41aaf430.bindTooltip(
+            `<div>`
+            + `B.C.N` + `</div>`,
+            {"sticky": true}
+        );
+        
+</script>
