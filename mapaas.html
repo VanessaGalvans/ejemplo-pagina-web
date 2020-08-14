@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_b9cca96434ea4f8f97a79c42822a9ef3 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_b9cca96434ea4f8f97a79c42822a9ef3" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_b9cca96434ea4f8f97a79c42822a9ef3 = L.map(
+        'map_b9cca96434ea4f8f97a79c42822a9ef3', {
+        center: [21, -99.1269],
+        zoom: 4,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+
+    
+    var tile_layer_ba6592c0a87c477d83816d11305d991a = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_b9cca96434ea4f8f97a79c42822a9ef3);
+    
+        var marker_6dd8f3f94bca488ca9d58054714930b1 = L.marker(
+            [19.2542, -99.1269],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_b9cca96434ea4f8f97a79c42822a9ef3);
+        
+    
+        marker_6dd8f3f94bca488ca9d58054714930b1.bindTooltip(
+            `<div>`
+            + `Sofia` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_919507b7d01745d68cdfc9b4364fd8b5 = L.marker(
+            [30.5027, -115.55],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_b9cca96434ea4f8f97a79c42822a9ef3);
+        
+    
+        marker_919507b7d01745d68cdfc9b4364fd8b5.bindTooltip(
+            `<div>`
+            + `Alberto` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_d174faa74a834ff991e2e80737b1afcb = L.marker(
+            [19.1727, -96.1333],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_b9cca96434ea4f8f97a79c42822a9ef3);
+        
+    
+        marker_d174faa74a834ff991e2e80737b1afcb.bindTooltip(
+            `<div>`
+            + `Vanessa` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_b5a259530ebe43b9a3a34565581201d3 = L.marker(
+            [21.0181, -101.25821],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_b9cca96434ea4f8f97a79c42822a9ef3);
+        
+    
+        marker_b5a259530ebe43b9a3a34565581201d3.bindTooltip(
+            `<div>`
+            + `Zaira` + `</div>`,
+            {"sticky": true}
+        );
+        
+</script>
