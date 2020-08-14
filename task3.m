@@ -1,12 +1,17 @@
 close all
-
+%Datos extraidos de la pagina de coronavirus mexico
 df = readtable('Casos_Diarios_Estado_Nacional_Confirmados_20200812.csv');
 muertes=readtable('Casos_Diarios_Estado_Nacional_Defunciones_20200813.csv');
 
-%Estados=df{:,3} %Asigna las etiquetas alfabéticamente
- % pasé los datos de una tabla a 33 vectores para tratarlos individualmente
+%Estados=df{:,3} %Asigna las etiquetas alfabÃ©ticamente
+ % pasÃ© los datos de una tabla a 33 vectores para tratarlos individualmente
  %como los sistemas de salud no reportan en fin de semana
- % opté por pasar los datos por un filtro promedio 2 veces para ver su comportamiento mejor.
+ % optÃ© por pasar los datos por un filtro promedio 2 veces para ver su comportamiento mejor.
+ %Los vectores de datos que nos interesan son los confirmados y muertes
+%De BajaCalifornia, Guanajuato, Veracruz y CDMX, 
+%El vector de confirmador se recorta a la longitud del vector de muertos
+%Esto porque una formula necesaria divide entre cero y ocasiona problemas y esto porque primero se reportaban confirmados y luego defunciones.
+
 %ags=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,3,1,2,1,1,4,0,17,3,6,5,3,4,1,0,0,2,0,2,4,1,1,0,3,1,2,7,2,12,7,16,12,3,17,13,11,21,11,1,7,17,31,18,27,4,4,3,49,12,16,24,14,0,4,11,43,14,23,27,3,7,36,20,27,30,24,17,8,39,39,36,45,42,15,20,63,60,60,44,60,24,26,73,66,63,63,60,33,24,78,58,73,63,69,15,26,68,54,50,69,56,17,11,38,39,79,69,67,11,8,92,119,53,43,77,21,32,82,83,81,87,72,22,13,51,96,51,72,72,17,21,69,61,59,59,61,32,17,61,72,52,41,32,17,10,29,0,0];
 ags=[1,3,1,2,1,1,4,0,17,3,6,5,3,4,1,0,0,2,0,2,4,1,1,0,3,1,2,7,2,12,7,16,12,3,17,13,11,21,11,1,7,17,31,18,27,4,4,3,49,12,16,24,14,0,4,11,43,14,23,27,3,7,36,20,27,30,24,17,8,39,39,36,45,42,15,20,63,60,60,44,60,24,26,73,66,63,63,60,33,24,78,58,73,63,69,15,26,68,54,50,69,56,17,11,38,39,79,69,67,11,8,92,119,53,43,77,21,32,82,83,81,87,72,22,13,51,96,51,72,72,17,21,69,61,59,59,61,32,17,61,72,52,41,32,17,10,29,0,0];
 ags=smooth(ags);
@@ -51,7 +56,7 @@ bcs=smooth(bcs);
 hold on
 %title('BC')
 %legend('BC')
-xlabel('Días')
+xlabel('DÃ­as')
 ylabel('COVID-19')
 %title('Casos Nacionales')
 set(gcf,'Color','w')
@@ -275,7 +280,7 @@ x=[0:length(bc)-1];
 %line([140 140],[0 180])
 hold on
 %legend('BC','Muerte de George Floyd','Instaura Sana Distancia','g')
-xlabel('Días')
+xlabel('DÃ­as')
 %ylabel('Casos Confirmados diarios')
 %title('Casos Nacionales')
 set(gcf,'Color','w')
